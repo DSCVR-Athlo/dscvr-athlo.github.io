@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>All your AI models in one place - Try DSCVR Athlo</title>
+        <meta name="description" content="Get all your AI models and tools in one place" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/logo.png"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="All your AI models in one place - Try DSCVR Athlo" />
+        <meta property="og:description" content="Get all your AI models and tools in one place" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/PaulleDemon" />
+        <meta property="og:image" content="" />
+
+        <!-- <link rel="stylesheet" href="css/tailwind-runtime.css" /> -->
+        <link rel="stylesheet" href="css/tailwind-build.css">
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-');
+        </script>
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] 
+            tw-text-black dark:tw-bg-black  dark:tw-text-white"
+    >
+        <!-- <div class="tw-absolute tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-flex 
+                    tw-h-[100px] tw-w-full tw-max-w-[80%]">
+            <div class="header-gradient tw-h-full tw-w-full "></div>
+        </div> -->
+
+        <header
+            id="#top"
+            class="tw-z-50 lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-[2rem] lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
+                    tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
+                    lg:tw-justify-around lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]"
+        >
+            <a class="tw-flex tw-p-[4px] tw-gap-2 tw-place-items-center" href="#top">
+                <div class="tw-h-[30px] tw-max-w-[100px]">
+                    <img
+                        src="./assets/logo/logo.png"
+                        alt="logo"
+                        class="tw-object-contain tw-h-full tw-w-full"
+                    />
+                </div>
+                <p class="flex tw-text-base tw-font-medium tw-w-[12rem]">DSCVR Athlo</p>
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <nav
+                    class="tw-relative tw-flex tw-h-full max-lg:tw-h-max tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col 
+                                max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center"
+                >
+                    <a class="header-links" href="#about"> Sobre </a>
+                    <a class="header-links" href="#resources"> Recursos </a>
+                    <a class="header-links" href="#testimonials"> Testemunhos </a>
+                    <a class="header-links" href="#pricing"> Preços </a>
+                    
+                </nav>
+                <div
+                    class="lg:tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full 
+                            max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <button type="button" onclick="toggleMode()" class="header-links tw-text-gray-600 dark:tw-text-gray-300" title="toggle-theme" 
+                            id="theme-toggle"> 
+                        <i class="bi bi-sun" id="toggle-mode-icon"></i>
+                    </button>
+                    <a
+                        href="#pricing"
+                        aria-label="Try DSCVR Athlo"
+                        class="btn tw-flex tw-gap-3 tw-px-3 tw-py-2 tw-transition-transform
+                                    tw-duration-[0.3s] hover:tw-translate-x-2"
+                    >
+                        <span>Acessar agora</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-gray-500 lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <section
+            class="hero-section tw-relative tw-mt-10 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-mt-[100px]"
+            id="hero-section"
+        >
+            <div    
+                class="hero-bg-gradient tw-relative tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
+            >
+                <div class="purple-bg-grad  reveal-up tw-absolute tw-left-1/2 tw--translate-1/2 tw-top-[10%] tw-h-[120px] tw-w-[120px]"></div> 
+
+                <div
+                    class="tw-flex tw-flex-col tw-min-h-[60vh] tw-place-content-center tw-items-center"
+                >
+                    <h2
+                        class="reveal-up tw-text-center tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[75px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span class="tw-font-extrabold">Transforme seu treino</span>
+                        <br />
+                        <span class="tw-text-gray-600 tw-font-thin tw-text-5xl max-lg:tw-text-3xl">usando Inteligência Artificial</span>
+                    </h2>
+                    <div
+                        class="reveal-up tw-mt-8 tw-max-w-[450px] tw-text-lg max-lg:tw-text-base tw-p-2 tw-text-center
+                         tw-text-gray-800 dark:tw-text-white max-lg:tw-max-w-full"
+                    >
+                        Descubra como a DSCVR Athlo pode revolucionar seu treinamento, oferecendo planos sob medida que se adaptam às suas necessidades e objetivos.
+                    </div>
+
+                    <div class="reveal-up tw-mt-10 max-md:tw-flex-col tw-flex tw-place-items-center tw-gap-4">
+                        <a
+                          href="#about"
+                          class="btn-special !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group tw-bg-white dark:tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors 
+                                      tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white"
+                        >
+                            
+                            <div class="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">
+                                <div class="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2
+                                             tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full"></div>
+                                <span class="bi bi-info-circle-fill"></span>
+                            </div>
+                            <span>Saiba Mais</span>
+                          </a>
+
+                        <a
+                          class="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                          href="#signup-prompt"
+                        >
+                            <span>Acessar agora</span>
+                            <i class="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
+                        </a>  
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section
+          class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8"
+        >
+            <h2 class="reveal-up tw-text-3xl max-md:tw-text-xl">
+                Aprovado por nossos parceiros
+            </h2>
+
+            <div class="reveal-up carousel-container">
+                <div
+                    class="carousel lg:w-place-content-center tw-mt-10 tw-flex tw-w-full tw-gap-5 max-md:tw-gap-2"
+                >
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/google.svg"
+                            alt="Google"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/microsoft.svg"
+                            alt="Microsoft"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/adobe.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/airbnb.svg"
+                            alt="Airbnb"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/stripe.svg"
+                            alt="Stripe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/reddit.svg"
+                            alt="Reddit"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                </div>
+            </div>
+        </section> -->
+            
+        <section
+          id="about"
+          class="tw-relative tw-flex  tw-w-full tw-min-h-[100vh] max-lg:tw-min-h-[80vh] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden"
+        >   
+             <div class="tw-w-full  tw-place-content-center tw-items-center 
+                        tw-flex tw-flex-col tw-max-w-[900px] tw-gap-4 tw-p-4">
+               <div class="purple-bg-grad  reveal-up tw-absolute tw-right-[20%] tw-top-[20%] tw-h-[200px] tw-w-[200px]"
+                ></div>
+                <h2 class="reveal-up tw-text-6xl max-lg:tw-text-4xl tw-text-center tw-leading-[75px] tw-uppercase">
+                    
+                    <span class="tw-font-semibold">Por que escolher</span>
+                    <br>
+                    <span class="tw-text-gray-600 tw-font-thin tw-text-5xl max-lg:tw-text-3xl">DSCVR Athlo?</span>
+                </h2>
+                <p class="reveal-up tw-mt-8 tw-max-w-[650px] tw-text-gray-900 dark:tw-text-gray-200 tw-text-center max-md:tw-text-sm">   
+                  A DSCVR Athlo combina tecnologia de ponta com expertise em fitness para oferecer uma experiência de treinamento única. Nossa plataforma utiliza inteligência artificial para criar treinos personalizados, monitorar seu progresso e ajustar seus planos em tempo real. Seja você um atleta amador ou um profissional, temos a solução ideal para você.
+                </p>
+                <div class="reveal-up tw-flex tw-mt-8">
+                    <a href="#pricing"
+                        class="tw-shadow-md hover:tw-shadow-xl dark:tw-shadow-gray-800 tw-transition-all tw-duration-300 
+                                        tw-border-[1px] tw-p-3 tw-px-4 tw-border-black dark:tw-border-white tw-rounded-md">
+                        Acessar Agora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden"
+        >   
+
+
+            <div
+                class="tw-mt-8 tw-flex tw-flex-col tw-w-full tw-h-full tw-place-items-center tw-gap-5"
+            >
+                <div
+                    class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
+                >
+                    <h2
+                        class="tw-text-6xl tw-font-medium max-md:tw-text-3xl tw-p-2"
+                    >
+                        Tenha a experiência completa
+                    </h2>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-flex-col tw-max-w-[1150px] max-lg:tw-max-w-full tw-h-full 
+                            tw-p-4 max-lg:tw-place-content-center tw-gap-8 "
+                >   
+
+                    <div class="reveal-up tw-w-full md:tw-h-[250px] max-md:tw-min-h-[250px] tw-flex">
+                        <a href="#pricing" class=" tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card  tw-gap-5 tw-flex 
+                            max-md:tw-flex-col tw-w-full tw-h-full  tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
+                            hover:tw-scale-[1.02]">
+                            <div class="tw-text-6xl tw-overflow-hidden tw-rounded-xl tw-w-full tw-h-full max-md:tw-h-[180px]">
+                                <img src="./assets/images/home/ai-models.png" class="tw-w-full tw-object-contain tw-h-full" 
+                                    alt="AI models">
+                                <!-- <i class="bi bi-grid-1x2-fill"></i> -->
+                            </div>
+                            <div class="tw-flex tw-flex-col tw-gap-4">
+                                <h2 class="tw-text-3xl max-md:tw-text-2xl tw-font-medium">Cronograma completo de trabalho</h2>
+                                <p class="tw-leading-normal tw-text-gray-800 dark:tw-text-gray-200">
+                                    Plano de treinamento personalizado, plano alimentar, diário de progresso, guia de execução dos exercícios, calendário de treinos, checklist e lembretes, relatório de avaliação fisica digital, e muito mais.
+                                </p>
+                                <div class="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
+                                    <span>Acessar Agora</span>
+                                    <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section
+          id="resources"
+          class="tw-relative tw-mt-10 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-items-center lg:tw-p-6"
+        >
+
+            <div
+                class="reveal-up tw-mt-[5%] tw-flex tw-h-full tw-w-full tw-place-content-center 
+                        tw-gap-2 tw-p-4 max-lg:tw-max-w-full max-lg:tw-flex-col"
+            >
+
+                <div
+                    class="tw-relative tw-flex tw-max-w-[30%] max-lg:tw-max-w-full tw-flex-col 
+                            tw-place-items-start tw-gap-4  tw-p-2 max-lg:tw-place-items-center 
+                            max-lg:tw-place-content-center max-lg:tw-w-full"
+                >
+                    <div
+                        class="tw-top-40 tw-flex tw-flex-col lg:tw-sticky tw-place-items-center tw-max-h-fit tw-max-w-[850px] max-lg:tw-max-h-fit max-lg:tw-max-w-[320px] tw-overflow-hidden"
+                    >
+                        <h2 class="tw-text-5xl tw-text-center tw-font-medium  max-md:tw-text-3xl"
+                            >
+                            O que Athlo pode fazer
+                        </h2>
+                        
+                        <a href="#pricing" class="btn !tw-mt-8 !tw-bg-transparent !tw-text-black 
+                                                !tw-border-[1px] !tw-border-black 
+                                                dark:!tw-border-white dark:!tw-text-white">
+                            Acessar Agora
+                        </a>
+
+                    </div>
+                   
+                </div>
+
+                <div
+                    class="tw-flex tw-flex-col tw-gap-10 tw-h-full tw-max-w-1/2 max-lg:tw-max-w-full tw-px-[10%]
+                             max-lg:tw-px-4 max-lg:tw-gap-3 max-lg:tw-w-full lg:tw-top-[20%]
+                             tw-place-items-center
+                             "
+                >   
+                    <div class="reveal-up tw-w-[450px] max-md:tw-w-full">
+                        <a href="#"
+                            class="tw-flex tw-w-full tw-h-full tw-gap-8 tw-rounded-xl 
+                                    hover:tw-shadow-lg dark:tw-shadow-[#171717] tw-duration-300 tw-transition-all
+                                  tw-p-8 tw-group/card"
+                        >
+                          <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="fa-solid fa-dumbbell"></i>
+                          </div>
+
+                          <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                              Plano de Treinamento Personalizado
+                            </h3>
+                            <p class="tw-text-gray-800 dark:tw-text-gray-100 max-md:tw-text-sm">
+                              Estrutura semanal de treinos, com detalhes de cada exercício (nome, séries, repetições, carga estimada e tempo de descanso). Além de instruções para aquecimento, alongamento e progressões de carga.
+                            </p>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="reveal-up tw-w-[450px] max-md:tw-w-full">
+                        <a href="#"
+                            class="tw-flex tw-w-full tw-h-full tw-gap-8 tw-rounded-xl
+                                 hover:tw-shadow-lg dark:tw-shadow-[#171717] tw-duration-300 tw-transition-all tw-p-8 tw-group/card"
+                        >
+                          <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="fa-solid fa-bowl-rice"></i>
+                          </div>
+
+                          <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                              Plano Alimentar
+                            </h3>
+                            <p class="tw-text-gray-800 dark:tw-text-gray-100 max-md:tw-text-sm">
+                              Estrutura de refeições por dia, com opções para substituições alimentares. Proporções de macronutrientes baseadas no seu objetivo (hipertrofia, emagrecimento, etc.). E muito mais.
+                            </p>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="reveal-up tw-w-[450px] max-md:tw-w-full">
+                        <a href="#"
+                            class="tw-flex tw-w-full tw-h-full tw-gap-8 tw-rounded-xl hover:tw-shadow-lg tw-duration-300 
+                                tw-transition-all dark:tw-shadow-[#171717] tw-p-8 tw-group/card"
+                        >
+                            <div class="tw-text-4xl max-md:tw-text-2xl">
+                              <i class="fa-solid fa-person-walking"></i>
+                            </div>
+
+                            <div class="tw-flex tw-flex-col tw-gap-4">
+                              <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Guia de Execução dos Exercícios
+                              </h3>
+                              <p class="tw-text-gray-800 dark:tw-text-gray-100 max-md:tw-text-sm">
+                                Ilustrações e links para vídeos demonstrando a execução correta dos exercícios. Dicas de postura, respiração e ajustes. Alertas sobre erros comuns e como evitá-los.
+                              </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="reveal-up tw-h-[240px] tw-w-[450px] max-md:tw-w-full">
+                        <a href="#"
+                            class="tw-flex tw-w-full dark:tw-shadow-[#171717] tw-h-full tw-gap-8 tw-rounded-xl  hover:tw-shadow-lg tw-duration-300 
+                            tw-transition-all tw-p-8 tw-group/card"
+                        >
+                            <div class="tw-text-4xl max-md:tw-text-2xl">
+                              <i class="fa-solid fa-calendar"></i>
+                            </div>
+
+                            <div class="tw-flex tw-flex-col tw-gap-4">
+                                <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                  Calendário de Treinos
+                                </h3>
+                                <p class="tw-text-gray-800 dark:tw-text-gray-100 max-md:tw-text-sm">
+                                  Cronograma semanal de treinos e descanso. Lembretes para atividades específicas, como sessões de alongamento. Calendário com Metas (como atingir X passos no mês).
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="reveal-up tw-w-[450px] max-md:tw-w-full">
+                        <a href="#"
+                            class="tw-flex tw-w-full tw-h-full tw-gap-8 tw-rounded-xl dark:tw-shadow-[#171717] hover:tw-shadow-lg tw-duration-300 
+                                tw-transition-all tw-p-8 tw-group/card"
+                        >
+                            <div class="tw-text-4xl max-md:tw-text-2xl">
+                              <i class="fa-solid fa-file-invoice"></i>
+                            </div>
+
+                            <div class="tw-flex tw-flex-col tw-gap-4">
+                                <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                  Relatório de Avaliação Física
+                                </h3>
+                                <p class="tw-text-gray-800 dark:tw-text-gray-100 max-md:tw-text-sm">
+                                  Resumo das informações fornecidas por você, incluindo a análise de IMC, gasto calórico estimado e sugestões para melhorar. Pontos fortes e áreas de melhoria no condicionamento físico.                                  
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="reveal-up tw-h-[240px] tw-w-[450px] max-md:tw-w-full">
+                        <a href="#"
+                            class="tw-flex tw-w-full tw-h-full tw-gap-8 tw-rounded-xl 
+                                    hover:tw-shadow-lg dark:tw-shadow-[#171717] tw-duration-300 tw-transition-all tw-p-8 tw-group/card"
+                        >
+                            <div class="tw-text-4xl max-md:tw-text-2xl">
+                              <i class="fa-solid fa-book"></i>
+                            </div>
+
+                            <div class="tw-flex tw-flex-col tw-gap-4">
+                                <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                  Diário de Progresso
+                                </h3>
+                                <p class="tw-text-gray-800 dark:tw-text-gray-100 max-md:tw-text-sm">
+                                  Campos para registrar cargas, repetições e variações de exercícios. Seção para monitorar peso, medidas corporais e desempenho em treinos. Notas diárias sobre bem-estar, sono e recuperação.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                
+            </div>
+        </section>
+
+
+        <section
+          id="testimonials"
+          class="tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%]"
+        >
+          <h3
+            class="reveal-up tw-text-4xl tw-font-medium tw-text-center max-md:tw-text-2xl"
+          >
+            Junte-se a diversos atletas que usam DSCVR Athlo
+          </h3>
+          <!-- Testimonials -->
+          <div
+            class="tw-mt-20 tw-gap-10 tw-space-y-8 max-md:tw-columns-1 lg:tw-columns-2 xl:tw-columns-3"
+          >
+            <div
+              class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid 
+                  tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] 
+                  tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]"
+            >
+              <div class="tw-flex tw-place-items-center tw-gap-3">
+                <div
+                  class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                >
+                  <img
+                    src="./assets/images/people/man2.jpg"
+                    class="tw-h-full tw-w-full tw-object-cover"
+                    alt="man"
+                  />
+                </div>
+                <div class="tw-flex tw-flex-col tw-gap-1">
+                  <div class="tw-font-semibold">Carlos M.</div>
+                  <div class="tw-text-gray-700 dark:tw-text-gray-300">Atleta Amador</div>
+                </div>
+              </div>
+              <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
+                "Graças ao DSCVR Athlo, consegui organizar minha rotina de treinos e minha alimentação de forma prática e eficiente. Os materiais enviados são incríveis!"
+              </p>
+            </div>
+
+            <div
+              class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid 
+                  tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] 
+                  tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]"
+            >
+              <div class="tw-flex tw-place-items-center tw-gap-3">
+                <div
+                  class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                >
+                  <img
+                    src="./assets/images/people/women.jpg"
+                    class="tw-h-full tw-w-full tw-object-cover"
+                    alt="women"
+                  />
+                </div>
+                <div class="tw-flex tw-flex-col tw-gap-1">
+                  <div class="tw-font-semibold">Marina A.</div>
+                  <div class="tw-text-gray-700 dark:tw-text-gray-300">Corredora</div>
+                </div>
+              </div>
+              <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
+                "Recebi um plano de treino totalmente adaptado às minhas necessidades e objetivos. Já estou vendo os resultados!"
+              </p>
+            </div>
+
+            <div
+              class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid 
+                  tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] 
+                  tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]"
+            >
+              <div class="tw-flex tw-place-items-center tw-gap-3">
+                <div
+                  class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                >
+                  <img
+                    src="./assets/images/people/man.jpg"
+                    class="tw-h-full tw-w-full tw-object-cover"
+                    alt="man"
+                  />
+                </div>
+                <div class="tw-flex tw-flex-col tw-gap-1">
+                  <div class="tw-font-semibold">Pedro S.</div>
+                  <div class="tw-text-gray-700 dark:tw-text-gray-300">Personal Trainer</div>
+                </div>
+              </div>
+              <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
+                "Minha rotina ficou muito mais organizada com o DSCVR Athlo. É perfeito para quem busca otimizar tempo e alcançar seus objetivos."
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+            class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-gap-6 tw-place-items-center tw-p-[2%]"
+            id="pricing"
+        >
+            <h3
+                class="reveal-up tw-text-5xl tw-font-medium max-md:tw-text-2xl"
+            >
+                Escolha o melhor plano pra você
+            </h3>
+            <!-- pricing -->
+            <div
+                class="tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
+            >
+                <div
+                    class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-[1px]
+                            tw-border-outlineColor tw-bg-white dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]"
+                >
+                    <h3 class="">
+                        <span class="tw-text-5xl max-md:tw-text-3xl tw-font-semibold">R$59</span>
+                        <span class="tw-text-2xl tw-text-gray-600 dark:tw-text-gray-300"></span>
+                    </h3>
+                    <p class="tw-mt-3 tw-text-center tw-text-gray-800 dark:tw-text-gray-100">
+                      Acesso Único ao Produto<br/>(Consulta Individual)
+                    </p>
+                    <hr />
+                    <ul
+                        class="tw-mt-4 tw-flex tw-flex-col tw-gap-4 tw-text-base tw-text-gray-800 dark:tw-text-gray-200"
+                    >
+                        <li class="tw-flex tw-gap-2">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Acesso a todos os produtos</span>    
+                        </li>
+                        <li class="tw-flex tw-gap-2">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Material enviado por email</span>    
+                        </li>
+                        <li class="tw-flex tw-gap-2">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Suporte disponível 24h</span>    
+                        </li>
+
+                        <li class="tw-flex tw-gap-2 ">
+                            <i class="bi bi-check-circle-fill tw-text-gray-400 dark:tw-text-gray-500"></i>
+                            <span>Acesso ao grupo auxiliar</span>    
+                        </li>
+
+                        <li class="tw-flex tw-gap-2 ">
+                            <i class="bi bi-check-circle-fill tw-text-gray-400 dark:tw-text-gray-500"></i>
+                            <span>Contato direto com os profissionais</span>    
+                        </li>
+                  
+                    </ul>
+                    <a
+                        href="#"
+                        class="btn tw-mt-auto !tw-w-full tw-transition-transform tw-duration-[0.3s] 
+                                hover:tw-scale-x-[1.02] !tw-text-black !tw-bg-transparent !tw-border-[1px]
+                                 tw-border-black dark:tw-border-white dark:!tw-text-white"
+                    >
+                        Selecionar Produto
+                    </a>
+                </div>
+                
+                <div
+                    class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-2
+                            tw-border-outlineColor tw-bg-white dark:tw-bg-[#080808] dark:tw-border-[#595858] tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]"
+                >
+                    <h3 class="">
+                        <span class="tw-text-5xl max-md:tw-text-3xl  tw-font-semibold">R$199</span>
+                    </h3>
+                    <p class="tw-mt-3 tw-text-center tw-text-gray-800 dark:tw-text-gray-200">
+                        Acesso Completo
+                        (Consulta Invidual + Acompanhamento)
+                    </p>
+                    <hr />
+                    <ul
+                        class="tw-mt-4 tw-flex tw-flex-col tw-gap-4  tw-text-base tw-text-gray-800 dark:tw-text-gray-100"
+                    >
+                    <li class="tw-flex tw-gap-2">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Acesso a todos os produtos</span>    
+                    </li>
+                    <li class="tw-flex tw-gap-2">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Material enviado por email</span>    
+                    </li>
+                    <li class="tw-flex tw-gap-2">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Suporte disponível 24h</span>    
+                    </li>
+
+                    <li class="tw-flex tw-gap-2 ">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Acesso ao grupo auxiliar</span>    
+                    </li>
+
+                    <li class="tw-flex tw-gap-2 ">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Contato direto com os profissionais</span>    
+                    </li>
+                  
+                    </ul>
+                    <a
+                        href="#"
+                        class="btn tw-mt-auto !tw-w-full tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.02]"
+                    >
+                      Selecionar Produto
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="tw-relative tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]">
+            <h3 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl">FAQ</h3>
+            <div class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4">
+              <div class="faq tw-w-full">
+                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                  <span>O que é DSCVR Athlo?</span>
+                  <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
+                              tw-ml-auto tw-font-semibold"></i>
+                </h4>
+                <div class="content max-lg:tw-text-sm">
+                  O DSCVR Athlo é uma plataforma projetada para ajudar atletas a gerenciar seus treinamentos e nutrição com planos personalizados, adaptados às suas metas e necessidades.
+                </div>
+              </div>
+              <hr>
+              <div class="faq tw-w-full">
+                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                  <span>Quem pode usar DSCVR Athlo?</span>
+                  <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
+                              tw-ml-auto tw-font-semibold"></i>
+                </h4>
+                <div class="content max-lg:tw-text-sm">
+                  O DSCVR Athlo é perfeito para atletas de todos os níveis, de iniciantes a profissionais, bem como para personal trainers que buscam otimizar as rotinas de seus clientes.
+                </div>
+              </div>
+              <hr>
+              <div class="faq tw-w-full">
+                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                  <span>Como começar a usar o DSCVR Athlo?</span>
+                  <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform tw-ml-auto tw-font-semibold"></i>
+                </h4>
+                <div class="content max-lg:tw-text-sm">
+                  Basta se inscrever em nossa plataforma, preencher seus objetivos e preferências de condicionamento físico e receber um plano de treinamento e nutrição personalizado.
+                </div>
+              </div>
+              <hr>
+              <div class="faq tw-w-full">
+                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                  <span>Posso personalizar meus planos?</span>
+                  <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform tw-ml-auto tw-font-semibold"></i>
+                </h4>
+                <div class="content max-lg:tw-text-sm">
+                  Claro! Você pode ajustar seus horários de treino, trocar exercícios e modificar opções de refeições para melhor se adequar ao seu estilo de vida.
+                </div>
+              </div>
+              <hr>
+              <div class="faq tw-w-full">
+                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                  <span>O DSCVR Athlo é adequado para iniciantes?</span>
+                  <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform tw-ml-auto tw-font-semibold"></i>
+                </h4>
+                <div class="content max-lg:tw-text-sm">
+                  Sim! O DSCVR Athlo é fácil de usar e oferece planos de exercícios e refeições para iniciantes para ajudar você a começar sua jornada fitness com facilidade.
+                </div>
+              </div>
+              <hr>
+              <div class="faq tw-w-full">
+                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                  <span>Existe um aplicativo móvel para o DSCVR Athlo?</span>
+                  <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform  tw-ml-auto tw-font-semibold"></i>
+                </h4>
+                <div class="content max-lg:tw-text-sm">
+                  Estamos desenvolvendo um aplicativo móvel para tornar sua experiência ainda mais conveniente. Fique ligado nas atualizações!
+                </div>
+              </div>
+              <hr>
+              <div class="faq tw-w-full">
+                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                  <span>Quanto custa o DSCVR Athlo?</span>
+                  <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
+                              tw-ml-auto tw-font-semibold"></i>
+                </h4>
+                <div class="content max-lg:tw-text-sm">
+                  O DSCVR Athlo oferece um plano com recursos básicos e planos premium para usuários que buscam ferramentas mais avançadas e suporte personalizado.
+                </div>
+              </div>
+            </div>
+            <div class="purple-bg-grad max-md:tw-hidden reveal-up tw-absolute tw-bottom-14 tw-right-[20%] tw-h-[150px] tw-w-[150px] tw-rounded-full"></div>
+        </section>
+
+       
+        <section class="tw-relative tw-flex tw-p-2  tw-w-full tw-min-h-[40vh]  tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden">
+          <div
+            class="tw-relative tw-overflow-hidden reveal-up tw-w-full tw-h-full tw-min-h-[350px] max-lg:tw-max-w-full tw-rounded-lg lg:tw-py-[5%] tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-place-content-center tw-items-center tw-flex tw-flex-col tw-max-w-[80%] tw-gap-4 tw-p-4 tw-bg-cover tw-bg-center"
+            style="background-image: url(assets/images/background/athlete-2.jpg);"
+          > 
+            <div class="tw-z-10 tw-w-full tw-h-full tw-absolute tw-left-0 tw-right-0 tw-top-0 tw-z-10 tw-h-full tw-w-full tw-bg-black tw-opacity-30"></div>
+
+            <h3 class="tw-z-20 tw-drop-shadow-md reveal-up tw-text-5xl tw-font-medium max-md:tw-text-3xl tw-text-center tw-leading-normal tw-text-white" style="text-shadow: 1px 1px 9px rgba(0,0,0,0.4);">
+              Acesse e comece a treinar hoje mesmo!
+            </h3>
+          
+            <div class="tw-z-20 tw-mt-2 tw-relative tw-flex max-lg:tw-flex-col tw-gap-5">
+              <a href="#pricing" class="btn  reveal-up !tw-rounded-full !tw-p-4 !tw-px-8 tw-font-medium">
+                Acessar Agora
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%] max-md:tw-px-2">
+          <div class="tw-flex tw-w-full tw-max-w-[80%] tw-place-content-center tw-place-items-center tw-justify-between tw-gap-3  tw-rounded-lg tw-bg-[#F6F7FB] dark:tw-bg-[#171717] tw-p-6 max-md:tw-max-w-full max-md:tw-flex-col">
+            <div class="tw-flex tw-flex-col max-lg:tw-text-center tw-gap-1">
+              <h2 class="tw-text-2xl tw-text-gray-800 dark:tw-text-gray-200 max-md:tw-text-xl">
+                Join our newsletter
+              </h2>
+              <div class="tw-text-gray-700 dark:tw-text-gray-300">Get product insights and updates.</div>
+            </div>
+
+            <div class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-overflow-hidden tw-p-2">
+              <input
+                type="email"
+                class="input tw-h-full tw-w-full !tw-border-gray-600 tw-p-2 tw-outline-none"
+                placeholder="email"
+              />
+              <a
+                class="btn !tw-rounded-full !tw-border-[1px] !tw-text-black !tw-border-solid !tw-border-black  dark:!tw-text-white  dark:!tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
+                href=""
+              >
+                Signup
+              </a>
+            </div>
+          </div>
+        </section> -->
+
+        <footer
+            class="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] 
+                    tw-text-black dark:tw-text-white max-md:tw-flex-col"
+        >
+            <!-- <div class="tw-flex max-md:tw-flex-col max-md:tw-gap-6 tw-gap-3 tw-w-full tw-place-content-around">
+                <div
+                    class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+                >   
+                    <a href="#" class="tw-w-full tw-place-items-center tw-flex tw-flex-col tw-gap-6">
+                        <img
+                            src="./assets/logo/logo.png"
+                            alt="logo"
+                            srcset=""
+                            class="tw-max-w-[120px] dark:tw-invert"
+                        />
+                        <div class="tw-max-w-[120px] tw-text-center tw-text-3xl tw-h-fit">
+                            PIXA
+                        </div>
+                    </a>
+                    <div class="tw-mt-3 tw-text-lg tw-font-semibold">Follow us</div>
+                    <div class="tw-flex tw-gap-4 tw-text-lg">
+                        <a
+                            href="https://github.com/PaulleDemon/"
+                            aria-label="Github"
+                        >
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a
+                            href="https://twitter.com/pauls_freeman"
+                            aria-label="Twitter"
+                        >
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                      
+                        <a
+                            href="https://www.linkedin.com/"
+                            aria-label="Linkedin"
+                        >
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="tw-flex max-md:tw-flex-col tw-flex-wrap tw-gap-6 tw-h-full tw-w-full tw-justify-around">
+                    <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
+                        <h2 class="tw-text-xl">Resources</h2>
+                        <div class="tw-flex tw-flex-col tw-gap-3">
+                            <a href="#" class="footer-link">Getting started</a>
+                            <a href="#" class="footer-link">API Docs</a>
+                            <a href="#" class="footer-link">API Endpoints</a>
+                            <a href="#" class="footer-link">Health status</a>
+                            <a href="#" class="footer-link">Pricing</a>
+                        </div>
+                    </div>
+
+
+                    <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
+                        <h2 class="tw-text-xl">Company</h2>
+                        <div class="tw-flex tw-flex-col tw-gap-3">
+                            <a href="#" class="footer-link">Support channels</a>
+                            <a href="#" class="footer-link">Systems</a>
+                            <a href="#" class="footer-link">Blog</a>
+                            <a href="https://twitter.com/pauls_freeman" class="footer-link">Twitter</a>
+                            <a href="https://github.com/PaulleDemon" class="footer-link">Github</a>
+                        </div>
+                    </div>
+
+                    <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
+                        <h2 class="tw-text-xl">Legal</h2>
+                        <div class="tw-flex tw-flex-col tw-gap-3">
+                            <a href="#" class="footer-link">Terms of service</a>
+                            <a href="#" class="footer-link">Privacy Policy</a>
+                            <a href="#" class="footer-link">DCMA - Content Takedown</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <hr class="tw-mt-2 tw-mb-8">
+            <div class="tw-mt-2 tw-flex tw-gap-2 tw-flex-col tw-text-gray-700 dark:tw-text-gray-300 tw-place-items-center 
+                    tw-text-[12px] tw-w-full tw-text-center tw-place-content-around">
+                <span>Copyright &#169; 2025</span>
+                <span>Todos os direitos reservados - DSCVR Solutions</span>
+            </div>
+
+        </footer>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./scripts/components.js"></script>
+    <script src="./index.js"></script>
+
+    <!-- By Paul: https://github.com/PaulleDemon -->
+</html>
