@@ -296,7 +296,9 @@ sections.forEach((sec) => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("Loaded")
   document.querySelectorAll("a").forEach((link) => {
+    console.log("Link", link);
     link.addEventListener("click", (event) => {
       const url = link.href; // Obtém a URL do link
       console.log("Enviando mensagem para o parent", url);
