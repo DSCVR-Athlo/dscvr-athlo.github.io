@@ -301,6 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const url = link.href; // Obtém a URL do link
       if (url.includes("#")) return; // Ignora links com #
 
+      console.log("Enviando mensagem para o parent", url);
       event.preventDefault(); // Evita a navegação padrão
       window.parent.postMessage({ type: "navigate", url }, "*"); // Envia a URL para o parent (janela principal)
     });
