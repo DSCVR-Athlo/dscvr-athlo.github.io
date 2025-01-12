@@ -71,7 +71,7 @@ class Prompt{
     constructor(target){
         this.playground = document.querySelector(target)
 
-        this.promptWindow = this.playground.querySelector(".prompt-container")
+        this.promptWindow = this.playground?.querySelector(".prompt-container")
         
         this.chatModel = "gpt 4o"
 

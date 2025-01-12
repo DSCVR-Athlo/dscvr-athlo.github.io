@@ -55,13 +55,13 @@ function responsive() {
 
     if (window.innerWidth > RESPONSIVE_WIDTH) {
         collapseHeaderItems.style.height = ""
-        navToggle.addEventListener("mouseenter", openNavDropdown)
-        navToggle.addEventListener("mouseleave", navMouseLeave)
+        navToggle?.addEventListener("mouseenter", openNavDropdown)
+        navToggle?.addEventListener("mouseleave", navMouseLeave)
 
     } else {
         isHeaderCollapsed = true
-        navToggle.removeEventListener("mouseenter", openNavDropdown)
-        navToggle.removeEventListener("mouseleave", navMouseLeave)
+        navToggle?.removeEventListener("mouseenter", openNavDropdown)
+        navToggle?.removeEventListener("mouseleave", navMouseLeave)
     }
 }
 responsive()
@@ -135,12 +135,12 @@ const dropdowns = document.querySelectorAll('.dropdown')
 dropdowns.forEach(dropdown => new Dropdown(`#${dropdown.id}`, promptWindow.setAIModel))
 
 
-navToggle.addEventListener("click", toggleNavDropdown)
-navDropdown.addEventListener("mouseleave", closeNavDropdown)
+navToggle?.addEventListener("click", toggleNavDropdown)
+navDropdown?.addEventListener("mouseleave", closeNavDropdown)
 
 function toggleNavDropdown(){
 
-    if (navDropdown.getAttribute("data-open") === "true"){
+    if (navDropdown?.getAttribute("data-open") === "true"){
         closeNavDropdown()
     }else{
         openNavDropdown()
@@ -153,10 +153,10 @@ function navMouseLeave(){
 
 function openNavDropdown(event){
 
-    navDropdown.classList.add("tw-opacity-100", "tw-scale-100", 
+    navDropdown?.classList.add("tw-opacity-100", "tw-scale-100", 
                             "max-lg:tw-min-h-[450px]", "max-lg:!tw-h-fit", "tw-min-w-[320px]")
     
-    navDropdown.setAttribute("data-open", true)
+    navDropdown?.setAttribute("data-open", true)
 
 }
 
@@ -164,14 +164,14 @@ function closeNavDropdown(event){
 
     // console.log("event target: ", event.target, event.target.contains(navDropdown))
     
-    if (navDropdown.matches(":hover")){
+    if (navDropdown?.matches(":hover")){
         return
     }
 
-    navDropdown.classList.remove("tw-opacity-100", "tw-scale-100", 
+    navDropdown?.classList.remove("tw-opacity-100", "tw-scale-100", 
         "max-lg:tw-min-h-[450px]", "tw-min-w-[320px]", "max-lg:!tw-h-fit",)
 
-    navDropdown.setAttribute("data-open", false)
+    navDropdown?.setAttribute("data-open", false)
 
 }
 
@@ -289,23 +289,5 @@ sections.forEach((sec) => {
         duration: 0.8,
         y: "0%",
         stagger: 0.2,
-    })
-
-
-})
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Loaded")
-  document.querySelectorAll("a").forEach((link) => {
-    console.log("Link", link);
-    link.addEventListener("click", (event) => {
-      const url = link.href; // Obtém a URL do link
-      console.log("Enviando mensagem para o parent", url);
-      if (url.includes("#")) return; // Ignora links com #
-
-      event.preventDefault(); // Evita a navegação padrão
-      window.parent.postMessage({ type: "navigate", url }, "*"); // Envia a URL para o parent (janela principal)
     });
-  });
 });
