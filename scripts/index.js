@@ -299,9 +299,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", (event) => {
       const url = link.href; // Obtém a URL do link
+      console.log("Enviando mensagem para o parent", url);
       if (url.includes("#")) return; // Ignora links com #
 
-      console.log("Enviando mensagem para o parent", url);
       event.preventDefault(); // Evita a navegação padrão
       window.parent.postMessage({ type: "navigate", url }, "*"); // Envia a URL para o parent (janela principal)
     });
