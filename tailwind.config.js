@@ -2,7 +2,6 @@
 module.exports = {
 	prefix: 'tw-',
 	content: [
-    "./index.html",
 		"**/*.{html, jsx, js}",
 		"**/*.js",
 		"**/*.html",

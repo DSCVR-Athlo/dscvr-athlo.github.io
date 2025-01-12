@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>DSCVR Athlo</title>
+      <meta name="description" content="Transforme seu treino usando Inteligência Artificial" />
+      <link
+          rel="shortcut icon"
+          href="./assets/logo/logo.png"
+          type="image/x-icon"
+      />
+
+      <!-- Open Graph / Facebook -->
+      <meta property="og:title" content="Transforme seu treino usando Inteligência Artificial" />
+      <meta property="og:description" content="Descubra como Athlo pode revolucionar seu treinamento, oferecendo planos sob medida que se adaptam às suas necessidades e objetivos." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://dscvr-athlo.github.io/" />
+      <meta property="og:image" content="" />
+
+      <!-- <link rel="stylesheet" href="css/tailwind-runtime.css" /> -->
+      <link rel="stylesheet" href="css/tailwind-build.css">
+      <link rel="stylesheet" href="css/index.css" />
+
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+      />
+  </head>
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black  dark:tw-text-white">
+      <header
+          id="#top"
+          class="tw-z-50 lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-[2rem] lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
+                  tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
+                  lg:tw-justify-around lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]"
+      >
+          <a class="tw-flex tw-p-[4px] tw-gap-2 tw-place-items-center" href="#top">
+              <div class="tw-h-[30px] tw-max-w-[100px]">
+                  <img
+                      src="./assets/logo/logo.png"
+                      alt="logo"
+                      class="tw-object-contain tw-h-full tw-w-full"
+                  />
+              </div>
+              <p class="flex tw-text-base tw-font-medium tw-w-[12rem]">DSCVR Athlo</p>
+          </a>
+          <div
+              class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+              id="collapsed-header-items"
+          >
+              <nav
+                  class="tw-relative tw-flex tw-h-full max-lg:tw-h-max tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col 
+                              max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center"
+              >
+                  <a class="header-links" href="#about"> Sobre </a>
+                  <a class="header-links" href="#resources"> Recursos </a>
+                  <a class="header-links" href="#testimonials"> Testemunhos </a>
+                  <a class="header-links" href="#pricing"> Preços </a>
+                  
+              </nav>
+              <div
+                  class="lg:tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full 
+                          max-md:tw-flex-col max-md:tw-place-content-center"
+              >
+                  <button type="button" onclick="toggleMode()" class="header-links tw-text-gray-600 dark:tw-text-gray-300" title="toggle-theme" 
+                          id="theme-toggle"> 
+                      <i class="bi bi-sun" id="toggle-mode-icon"></i>
+                  </button>
+                  <a
+                      href="#pricing"
+                      aria-label="Try DSCVR Athlo"
+                      class="btn tw-flex tw-gap-3 tw-px-3 tw-py-2 tw-transition-transform
+                                  tw-duration-[0.3s] hover:tw-translate-x-2"
+                  >
+                      <span>Acessar agora</span>
+                      <i class="bi bi-arrow-right"></i>
+                  </a>
+              </div>
+          </div>
+          <button
+              class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-gray-500 lg:tw-hidden"
+              onclick="toggleHeader()"
+              aria-label="menu"
+              id="collapse-btn"
+          ></button>
+      </header>
+      <section id="terms-of-use" class="tw-pb-10 tw-pt-[9rem] tw-px-4">
+        <div class="tw-max-w-screen-lg tw-mx-auto tw-text-gray-800 dark:tw-text-gray-200">
+            <h1 class="tw-text-4xl tw-font-semibold tw-text-center tw-mb-8">Termos de Uso</h1>
+            
+            <p class="tw-text-lg">
+                Bem-vindo ao nosso produto! Antes de utilizar os nossos serviços, pedimos que leia atentamente os 
+                seguintes Termos de Uso. Ao acessar ou utilizar o nosso produto, você concorda em cumprir os termos e condições aqui descritos.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">1. Aceitação dos Termos</h2>
+            <p>
+                Ao acessar ou utilizar nossos serviços, você concorda em se submeter a estes Termos de Uso e a nossa 
+                Política de Privacidade. Caso não concorde com os termos, não utilize nossos serviços.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">2. Modificação dos Termos</h2>
+            <p>
+                Nós reservamos o direito de modificar ou atualizar os Termos de Uso a qualquer momento, sem aviso prévio. 
+                Recomendamos que você consulte esta página regularmente para se manter atualizado sobre quaisquer mudanças.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">3. Uso do Serviço</h2>
+            <p>
+                O serviço é destinado a usuários que concordam em utilizar o produto de maneira legal e de acordo com os 
+                termos aqui descritos. Você concorda em não utilizar o serviço para fins ilegais, fraudulentos ou prejudiciais.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">4. Direitos de Propriedade Intelectual</h2>
+            <p>
+                Todos os direitos sobre o conteúdo, design, marca e materiais relacionados ao serviço são de propriedade 
+                exclusiva da empresa. Nenhuma parte do serviço pode ser copiada, distribuída, ou utilizada sem nossa autorização expressa.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">5. Responsabilidade do Usuário</h2>
+            <p>
+                Você é responsável por todas as atividades que ocorrerem sob sua conta de usuário, incluindo a segurança 
+                da sua senha. Qualquer uso não autorizado de sua conta deve ser imediatamente comunicado a nós.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">6. Limitação de Responsabilidade</h2>
+            <p>
+                Não nos responsabilizamos por danos indiretos, especiais ou consequenciais resultantes do uso ou da 
+                impossibilidade de uso dos nossos serviços, mesmo que tenhamos sido informados da possibilidade desses danos.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">7. Cancelamento de Conta</h2>
+            <p>
+                Você pode cancelar sua conta a qualquer momento, conforme as instruções disponíveis no serviço. 
+                Caso haja qualquer violação destes Termos de Uso, poderemos suspender ou encerrar sua conta sem aviso prévio.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">8. Lei Aplicável</h2>
+            <p>
+                Estes Termos de Uso são regidos pelas leis aplicáveis do país em que a empresa está sediada. 
+                Qualquer disputa será resolvida no foro competente.
+            </p>
+
+            <h2 class="tw-text-2xl tw-font-semibold tw-mt-6">9. Contato</h2>
+            <p>
+                Se você tiver qualquer dúvida sobre estes Termos de Uso, entre em contato conosco através do e-mail 
+                <strong>suporte@exemplo.com</strong>.
+            </p>
+
+            <p class="tw-text-center tw-mt-8">
+                <strong>Data de atualização: Janeiro de 2025</strong>
+            </p>
+        </div>
+      </section>
+
+    <footer
+        class="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] 
+                tw-text-black dark:tw-text-white max-md:tw-flex-col"
+    >
+      <hr class="tw-mt-2 tw-mb-8">
+      <div class="tw-mt-2 tw-flex tw-gap-2 tw-flex-col tw-text-gray-700 dark:tw-text-gray-300 tw-place-items-center 
+              tw-text-[12px] tw-w-full tw-text-center tw-place-content-around">
+        <span>Copyright &#169; 2025</span>
+        <span>Todos os direitos reservados - DSCVR Solutions</span>
+      </div>
+    </footer>
+  </body>
+
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+      integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+  ></script>
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+      integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./scripts/components.js"></script>
+  <script src="./index.js"></script>
+
+  <!-- By Paul: https://dscvr-athlo.github.io/ -->
+</html>
