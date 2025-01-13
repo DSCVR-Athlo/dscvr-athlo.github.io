@@ -1,7 +1,7 @@
 {
   "name": "dscvr.athlo",
   "version": "1.0.0",
-  "description": "DSCVR Athlo",
+  "description": "Athlo by DSCVR",
   "main": "index.js",
   "author": "Lucas Paes",
   "scripts": {
